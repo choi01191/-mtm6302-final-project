@@ -1,0 +1,7 @@
+body {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat !important;
+    background-size: cover !important
+}

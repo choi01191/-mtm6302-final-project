@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="setting_menu"></div>
+    <div id="menu-conmtainer">
+        <h1>Setting</h1>
+        <h2>24HOURS-CLOCK</h2>
+        <label for="#24hours-yes">YES</label>
+        <input type="radio" name="24hours" id="#24hour-yes">
+        <label for="#24hours-no">N0</label>
+        <input type="radio" name="24hours" id="#24hours-no" checked>
+        <hr>
+        <h2>SHOW SECONDS</h2>
+        <label for="#show-sec-yes">YES</label>
+        <input type="radio" name="show-sec" id="#show-sec-yes">
+        <label for="#show-sec-no">NO</label>
+        <input type="radio" name="show-sec" id="#show-sec-no" checked>
+    </div>
+    <div id="display-clock"></div>
+    <button id="more">more</button>
+    <div id="detail-box">
+        <div id="day-week"></div>
+        <div id="day-month"></div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
