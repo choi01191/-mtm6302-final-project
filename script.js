@@ -10,11 +10,11 @@
 
 √A greeting (relevant to the time of day) is displayed
 
-Visibility can be toggled on a "more data" section
+√Visibility can be toggled on a "more data" section
 
-Visibility can be toggled on a settings section	
+√Visibility can be toggled on a settings section	
 
-At least two application features can be customized
+√At least two application features can be customized
 
 The settings are stored in and retrieved from Local Storage
 
@@ -26,7 +26,6 @@ The settings are stored in and retrieved from Local Storage
 
 const $body = document.querySelector('body')
 const $displayclock = document.getElementById('display-clock')
-// 숙제에서는 date() current date 만약 오늘게 사진이아면 다른거 페이스홀더 쓰거나 해라
 let currentDay = new Date()
 currentDay = currentDay.toISOString().slice(0, 10)
 console.log(currentDay);
@@ -47,10 +46,10 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=dCjJSQ5676lQRwbe1DXfgZsNaq9Ul
 //The current date and time is displayed,accurately updates every second
 
 //currentTime.toLocaleTimeString().split(' ') pm/am function
-
+let currentTime = new Date()
 const createCurrentDisplayTime = () => {
     setInterval(function () {
-        let currentTime = new Date()
+
         let hour = currentTime.getHours()
         let min = currentTime.getMinutes()
         let second = currentTime.getSeconds()
@@ -81,6 +80,70 @@ const createCurrentDisplayTime = () => {
 }
 createCurrentDisplayTime()
 
+//toggle
+const $position = document.getElementById('menu-container')
+
+const $settingMenu = document.querySelector('.fas')
+const $more = document.getElementById('more')
+const $detailBox = document.getElementById('detail-box')
+const $menuContainer = document.getElementById('menu-container')
+// 이거펑션안되는 이유
+const toggleFnc = ($position) => {
+    if ($position.style.display == 'flex') {
+        $position.style.display = 'none'
+    }
+    else { $position.style.display = 'flex' }
+
+}
+$settingMenu.onclick = toggleFnc($menuContainer)
+$settingMenu.onclick = function () {
+    if ($menuContainer.style.display == 'flex') {
+        $menuContainer.style.display = 'none'
+
+    }
+    else {
+
+        $menuContainer.style.display = 'flex'
+
+    }
+}
+
+$more.onclick = function () {
+    if ($detailBox.style.display == 'flex') {
+        $detailBox.style.display = 'none'
+        $more.value = 'More'
+    }
+    else {
+
+        $detailBox.style.display = 'flex'
+        $more.value = 'Less'
+    }
+}
+
+//put detail in the detail box
+const monthMapping = {
+    0: "January",
+    1: 'February',
+    2: 'March',
+    3: 'April',
+    4: 'May',
+    5: 'June',
+    6: 'July',
+    7: 'August',
+    8: 'September',
+    9: 'October',
+    10: 'November',
+    11: 'December'
+}
+let currentYear = currentTime.getFullYear()
+document.getElementById('year').textContent = currentYear
+let currentMonth = currentTime.getUTCMonth()
+document.getElementById('month').textContent = monthMapping[currentMonth]
+let currentDate = currentTime.getDate()
+document.getElementById('date').textContent = currentDate
 
 
-
+/**
+ * The settings are stored in and retrieved from Local Storage.
+ * i.
+*/

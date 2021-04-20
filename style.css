@@ -28,7 +28,6 @@ body {
     display: none;
     float: left;
     align-items: center;
-    display: flex;
     flex-direction: column;
     width: 20%;
     background-color: lightgray
@@ -53,8 +52,9 @@ input {
 
 #greeting {
     position: absolute;
-    top: 60%;
-    left: 60%
+    top: 25%;
+    left: 50%;
+    transform: translate(-55%, -50%);
 }
 
 #display-clock {
@@ -68,6 +68,21 @@ input {
 }
 
 #detail-box {
-    display: block;
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    background-color: gray;
+    bottom: 0;
+    height: 100px;
     width: 100vw;
+}
+
+#detail-box div {
+    margin: 10%;
+}
+
+#menu-container {
+    display: none;
 }
