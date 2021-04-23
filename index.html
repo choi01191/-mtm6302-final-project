@@ -2,50 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APOD Time display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-
-
     <div id="menu-container">
-        <h1>Setting</h1>
-        <h3>24HOURS-CLOCK</h3>
-        <label for="#24hours-yes">YES</label>
-        <input type="radio" name="24hours" id="#24hour-yes">
-        <label for="#24hours-no">N0</label>
-        <input type="radio" name="24hours" id="#24hours-no" checked>
-        <hr>
+        <h1>Settings</h1>
+
+        <h3>24 HOUR CLOCK</h3>
+        <label for="24hours-yes">YES</label>
+        <input type="radio" name="24hours" id="24hours-yes" />
+        <label for="24hours-no">NO</label>
+        <input type="radio" name="24hours" id="24hours-no" />
+        <hr />
         <h3>SHOW SECONDS</h3>
-        <label for="#show-sec-yes">YES</label>
-        <input type="radio" name="show-sec" id="#show-sec-yes">
-        <label for="#show-sec-no">NO</label>
-        <input type="radio" name="show-sec" id="#show-sec-no" checked>
-        <input type="button" value="Save">
+        <label for="show-sec-yes">YES</label>
+        <input type="radio" name="show-sec" id="show-sec-yes" />
+        <label for="show-sec-no">NO</label>
+        <input type="radio" name="show-sec" id="show-sec-no" />
+        <input id="save" type="button" value="Save" />
     </div>
     <div id="init-show">
         <i class="fas fa-cog"></i>
         <h4 id="greeting"></h4>
-        <div id="display-clock">
+        <div id="display-clock"></div>
 
-        </div>
-
-        <input id='more' type="button" value="More">
+        <input id="more" type="button" value="More" />
     </div>
     <div id="detail-box">
         <div class="col1">
-            <h2>Year Of Today </h2>
+            <h2>Year Of Today</h2>
             <h1 id="year"></h1>
         </div>
         <div class="col1">
-            <h2>Month of Today </h2>
+            <h2>Month of Today</h2>
             <h1 id="month"></h1>
         </div>
         <div class="col1">
@@ -53,7 +47,7 @@
             <h1 id="date"></h1>
         </div>
     </div>
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
